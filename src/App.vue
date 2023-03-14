@@ -1,18 +1,3 @@
 <template>
-  <div class="container">
-    App
-    <button @click="fn">测试request函数</button>
-  </div>
+  <router-view></router-view>
 </template>
-<script>
-import request from "@/utils/request";
-export default {
-  name: "App",
-  setup() {
-    const fn = () => {
-      request("/member/profile", "get");
-    };
-    return { fn };
-  },
-};
-</script>

@@ -1,9 +1,27 @@
 <template>
   <div>
-    <p>布局容器</p>
+    <!--    顶部通栏-->
+    <nav></nav>
+    <!--    头部组件-->
+    <header></header>
+    <!--    内容容器-->
+    <div class="main">
+      <div class="app-body">
+        <!-- 二级路由 -->
+        <RouterView />
+      </div>
+    </div>
+    <!--    底部组件-->
+    <footer></footer>
   </div>
 </template>
-
-<script setup></script>
+<script>
+export default {
+  name: "LayoutView",
+};
+</script>
+<script setup>
+// 定义组件名称
+</script>
 
 <style scoped></style>
