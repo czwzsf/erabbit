@@ -1,14 +1,13 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+// 导入模块
+import user from "./modules/user";
+import category from "./modules/category";
+import cart from "./modules/cart";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    user,
+    cart,
+    category,
+  },
+});
