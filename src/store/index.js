@@ -3,6 +3,8 @@ import { createStore } from "vuex";
 import user from "./modules/user";
 import category from "./modules/category";
 import cart from "./modules/cart";
+// vuex持久化
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
   modules: {
@@ -10,4 +12,11 @@ export default createStore({
     cart,
     category,
   },
+  // vuex持久化
+  plugins: [
+    createPersistedState({
+      key: "erabbit",
+      paths: ["user", "cart"],
+    }),
+  ],
 });
